@@ -355,66 +355,85 @@ def runner(choices, df):
     if choices[3] == 2:
         dfX = range_scale(dfX)
         f.write("Scaling complete!\n")
+        print("Scaling complete")
 
     #dimensionality reduction
     if choices[1] == 1:
         #no dimensionality reduction
         f.write("No dimensionality reduction chosen.\n")
+        print("No dimensionality reduction chosen")
     elif choices[1] == 2:
         f.write("Running locally linear embedding\n")
+        print("Running locally linear embedding\n")
         var = LLE(dfX, dfY)
         dfX = var[0]
         dfY = var[1]
         f.write("LLE complete\n")
+        print("LLE complete\n")
     elif choices[1] == 3:
         f.write("Running batched LLE 5 times\n")
         for i in range(3):
             batch_LLE(dfX, dfY)
         f.write("LLE complete\n")
+        print("LLE complete")
     elif choices[1] == 4:
         f.write("Running Isomap\n")
         var = isomap(dfX, dfY)
         dfX = var[0]
         dfY = var[1]
         f.write("Isomap complete\n")
+        print("Isomap complete")
     elif choices[1] == 5:
         f.write("Running Isomap (Measured) 5 times\n")
         for i in range(3):
             batch_isomap(dfX, dfY)
         f.write("Isomap complete\n")
+        print("Isomap complete")
     elif choices[1] == 6:
         f.write("Modified LLE\n")
+        print("Modified LLE")
         var = LLE(dfX, dfY, False, 'modified')
         dfX = var[0]
         dfY = var[1]
         f.write("Modified LLE complete\n")
+        print("Modified LLE complete")
     elif choices[1] == 7:
         f.write("Modified LLE (Measured)\n")
+        print("Modified LLE (Measured)")
         for i in range(3):
             batch_LLE(dfX, dfY, 'modified')
         f.write("Modified LLE complete\n")
+        print("Modified LLE complete")
     elif choices[1] == 8:
         f.write("LTSA\n")
+        print("LTSA")
         var = LLE(dfX, dfY, 'ltsa')
         dfX = var[0]
         dfY = var[1]
         f.write("LTSA complete\n")
+        print("LTSA complete")
     elif choices[1] == 9:
         f.write("LTSA (Measured)\n")
+        print("LTSA (Measured)")
         for i in range(3):
             batch_LLE(dfX, dfY, 'ltsa')
         f.write("LTSA complete\n")
+        print("LTSA complete")
     elif choices[1] == 10:
         f.write("Hessian LLE\n")
+        print("Hessian LLE")
         var = LLE(dfX, dfY, False, 'hessian')
         dfX = var[0]
         dfY = var[1]
         f.write("Hessian LLE complete\n")
+        print("Hessian LLE complete")
     elif choices[1] == 11:
         f.write("Hessian LLE (Measured)\n")
+        print("Hessian LLE (Measured)")
         for i in range(3):
             batch_LLE(dfX, dfY, 'hessian')
         f.write("Hessian LLE complete\n")
+        print("Hessian LLE complete")
     elif choices[1] == 12:
         f.write("Spectral Embedding (Laplacian Eigenmaps)\n")
         spectral(dfX, dfY)
@@ -429,48 +448,70 @@ def runner(choices, df):
     if choices[2] == 1:
         #run decision tree batch
         f.write("Running decision tree\n")
+        print("Running decision tree")
         f.write(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
+        print(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
         decision_tree(dfX, dfY)
     elif choices[2] == 2:
         #one batch of decision tree
         f.write("Running decision tree (measured)\n")
+        print("Running decision tree (measured)")
         f.write(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
+        print(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
         for i in range(3):
             batch_decision_tree(dfX, dfY)
     elif choices[2] == 3:
         f.write("Running random forest\n")
+        print("Running random forest")
         f.write(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
+        print(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
         random_forest(dfX, dfY)
         f.write("Complete!\n")
+        print("Complete!")
     elif choices[2] == 4:
         f.write("Running random forest (measured)\n")
+        print("Running random forest (measured)")
         f.write(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
+        print(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
         for i in range(2):
             batch_random_forest(dfX, dfY)
         f.write("Complete!\n")
+        print("Complete!")
     elif choices[2] == 5:
         f.write("Running KNN\n")
+        print("Running KNN")
         k_nearest(dfX, dfY)
         f.write("Complete!\n")
+        print("Complete!")
     elif choices[2] == 6:
         f.write("Running KNN (measured)\n")
+        print("Running KNN (measured)")
         f.write(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
+        print(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
         for i in range(3):
             batch_k_nearest(dfX, dfY)
         f.write("Complete!\n")
+        print("Complete!")
     elif choices[2] == 7:
         f.write("Running adaboost\n")
+        print("Running adaboost")
         ada(dfX, dfY)
         f.write("Complete!\n")
+        print("Complete")
     elif choices[2] == 8:
         f.write("Running adaboost (measured)\n")
+        print("Running adaboost (measured)")
         f.write(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
+        print(f"X shape is {dfX.shape} and Y shape is {dfY.shape}\n")
         for i in range(3):
             batch_ada(dfX, dfY)
         f.write("Complete!\n")
+        print("Complete")
     else:
         f.write("No classifier run.\n")
+        print("No classifier chosen")
     f.write("Script complete!\n")
+    print("Script complete!")
 
 #global variables
 component_selection = 20
