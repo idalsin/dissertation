@@ -1,6 +1,5 @@
-# Aug 18 - Ian Dalsin
-# Python script to analyze a CSV and output some descriptive statistics
-# mostly using pandas, see User Guide
+# July 18 - Ian Dalsin
+# Python script to analyze a CSV and output descriptive statistics
 
 from sklearn import preprocessing
 import pandas as p
@@ -98,11 +97,11 @@ def one_file_stats(filename):
 #the options below represent different 'calls' based on which lines are commented/uncommented
 
 #call for all files in directory, batch process
-directory = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/'
-for filename in os.listdir(directory):
-    if filename[0:5] != ".~loc":
-        one_file_stats(directory + filename)
-        print("File complete!")
+# directory = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/'
+# for filename in os.listdir(directory):
+#     if filename[0:5] != ".~loc":
+#         one_file_stats(directory + filename)
+#         print("File complete!")
 
 # call for one file only
-#one_file_stats('~/Documents/Thesis/Processed Traffic Data for ML Algorithms/Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv')
+one_file_stats('~/Documents/Thesis/Processed Traffic Data for ML Algorithms/Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv')

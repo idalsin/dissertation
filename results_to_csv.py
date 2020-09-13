@@ -1,4 +1,4 @@
-#parse my results txt files into a CSV of some type
+#parse my results txt files into a CSV
 import os #for later directory parsing
 
 def write_array(arr, extra=None, name=None):
@@ -145,7 +145,7 @@ def parse_csv(filename):
     print('\n')
 
 
-directory = '/Users/iandalsin/Nextcloud/School/Sem5 - Dissertation/scikit-backup-nc/Test Results/'
+directory = '/Users/iandalsin/Nextcloud/scikit-backup-nc/Test Results/'
 outfile = open('results_parsed.csv', 'w')
 for filename in os.listdir(directory):
     print(filename)

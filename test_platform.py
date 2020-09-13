@@ -476,80 +476,12 @@ def runner(choices, df):
 component_selection = 20
 manifold_subset = 2000
 batch = 2000 #rows to transform at a time in manifolds that are batched
+
 #take user input
 choices = chooser()
 # #multiclass, LLE with stats, decision tree, no range
 df = load_data() #make sure to run this after every "choices" block
-f = open('lastoutput.txt', 'w')
+f = open('output.txt', 'w')
 #run on choices and input dataframe
 runner(choices, df)
 f.close()
-
-# print("Moving to master plan")
-# choices = chooser()
-# directory = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/'
-# for filename in os.listdir(directory):
-#     if filename[0:5] != ".~loc":
-#         strtemp = ""
-#         for i in choices:
-#             strtemp = strtemp + str(i)
-#         f = open(strtemp + filename + ".txt", 'w')
-#         print("Filename: " + filename + " choices " + strtemp)
-#         df = load_data(directory + filename)
-#         print("Dataframe is" + str(df.shape))
-#         runner(choices, df)
-#         f.close()
-
-# directory = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/'
-# manifolds_to_run = [2,4,6,8,10]
-# classifiers_run_A = [2,4]
-# classifiers_run_B = [6,8]
-#
-# for j in manifolds_to_run:
-#     #for y in classifiers_run_A:
-#     for y in classifiers_run_B:
-#         print("Run B")
-#         choices = [0, j, y, 2]
-#         print(str(choices))
-#         for filename in os.listdir(directory):
-#             if filename[0:5] != ".~loc":
-#                 strtemp = ""
-#                 for i in choices:
-#                     strtemp = strtemp + str(i)
-#                 f = open(strtemp + filename + ".txt", 'w')
-#                 print("Filename: " + filename + " choices " + strtemp)
-#                 df = load_data(directory + filename)
-#                 print("Dataframe is" + str(df.shape))
-#                 runner(choices, df)
-#                 f.close()
-
-directory = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/'
-# choices = [0,3,9,0]
-# filename = 'Friday-02-03-2018_TrafficForML_CICFlowMeter.csv'
-# strtemp = ""
-# for i in choices:
-#     strtemp = strtemp + str(i)
-# f = open(strtemp + fsilename + ".txt", 'w')
-# print("Filename: " + filename + " choices " + strtemp)
-# df = load_data(directory + filename)
-# print("Dataframe is" + str(df.shape))
-# runner(choices, df)
-# f.close()
-# manifolds_to_run = [3]
-# scale_to_run = [0,1]
-#
-# for j in manifolds_to_run:
-#     for y in classifiers_run:
-#         choices = [0, j, 9, y]
-#         print(str(choices))
-#         for filename in os.listdir(directory):
-#             if filename[0:5] != ".~loc":
-#                 strtemp = ""
-#                 for i in choices:
-#                     strtemp = strtemp + str(i)
-#                 f = open(strtemp + filename + "_B.txt", 'w')
-#                 print("Filename: " + filename + " choices " + strtemp)
-#                 df = load_data(directory + filename)
-#                 print("Dataframe is" + str(df.shape))
-#                 runner(choices, df)
-#                 f.close()

@@ -2,21 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as p
 
-# file1 = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv'
-# key_port = 80
-# date = '15-02-2018'
-# file1 = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv'
-# key_port = 22
-# date = '14-02-2018'
-# file1 = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv'
-# key_port = 80
-# date = '22-02-2018'
-# file1 = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv'
-# key_port = 80
-# date = '21-02-2018'
-# file1 = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/Friday-16-02-2018_TrafficForML_CICFlowMeter.csv'
-# key_port = 21
-# date = '16-02-2018'
+# Adjust the below variables in order to generate scatterplots for chosen CSV files.
+file1 = '/home/id/Documents/Thesis/Processed Traffic Data for ML Algorithms/Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv'
+key_port = 80
+date = '15-02-2018'
 
 set1 = p.read_csv(file1, parse_dates=True, dtype={'Label':'string'})
 print("File loaded successfully...")
