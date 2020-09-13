@@ -1,6 +1,4 @@
 #Final experimental platform
-
-#before completion, note if any of these can be removed.
 import pandas as p
 import numpy as np
 from sklearn import *
