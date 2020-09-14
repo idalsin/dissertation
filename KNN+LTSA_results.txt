@@ -1,0 +1,58 @@
+checking for NaN values
+column Flow Byts/s has 4041 NaN values
+checking for infinite values
+column Flow Byts/s has infinite values
+column Flow Pkts/s has infinite values
+infinite check complete
+Dropping rows with infinite or NaN values
+Removed 6169 rows
+The data contains the following attacks: <StringArray>
+['Benign', 'Infilteration']
+Length: 2, dtype: string
+Shuffling data randomly...
+Scaling complete!
+LTSA
+LTSA complete
+Running KNN (measured)
+X shape is (604901, 20) and Y shape is (604901,)
+KNN - memory
+Fitting...
+Current memory usage is 4.88303 MB;'    ' peak was 161.626535 MB
+KNN - time
+Fitting...
+execute in 16.9079854849997 seconds
+KNN - evaluation
+Fitting...
+Confusion matrix:
+[[211838   3045]
+ [ 26585    493]]
+F1 score:
+0.8775422485441868
+KNN - memory
+Fitting...
+Current memory usage is 0.006936 MB;'    ' peak was 156.764873 MB
+KNN - time
+Fitting...
+execute in 17.795573409999633 seconds
+KNN - evaluation
+Fitting...
+Confusion matrix:
+[[211838   3045]
+ [ 26585    493]]
+F1 score:
+0.8775422485441868
+KNN - memory
+Fitting...
+Current memory usage is 0.006936 MB;'    ' peak was 156.764873 MB
+KNN - time
+Fitting...
+execute in 16.836732022999968 seconds
+KNN - evaluation
+Fitting...
+Confusion matrix:
+[[211838   3045]
+ [ 26585    493]]
+F1 score:
+0.8775422485441868
+Complete!
+Script complete!

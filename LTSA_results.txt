@@ -1,0 +1,41 @@
+checking for NaN values
+column Flow Byts/s has 4041 NaN values
+checking for infinite values
+column Flow Byts/s has infinite values
+column Flow Pkts/s has infinite values
+infinite check complete
+Dropping rows with infinite or NaN values
+Removed 6169 rows
+The data contains the following attacks: <StringArray>
+['Benign', 'Infilteration']
+Length: 2, dtype: string
+Shuffling data randomly...
+Scaling complete!
+LTSA (Measured)
+LLE - evaluation
+LLE evaluation statistics
+Reconstruction error associated with this embedding: nan
+Parameters: <bound method BaseEstimator.get_params of LocallyLinearEmbedding(method='ltsa', n_components=5)>
+LLE - memory
+Current memory usage is 0.075844 MB;'    ' peak was 67.494107 MB
+LLE - timed
+execute in 116.12936151999929 seconds
+LLE - evaluation
+LLE evaluation statistics
+Reconstruction error associated with this embedding: nan
+Parameters: <bound method BaseEstimator.get_params of LocallyLinearEmbedding(method='ltsa', n_components=5)>
+LLE - memory
+Current memory usage is 0.190041 MB;'    ' peak was 67.48763 MB
+LLE - timed
+execute in 80.63942210000005 seconds
+LLE - evaluation
+LLE evaluation statistics
+Reconstruction error associated with this embedding: nan
+Parameters: <bound method BaseEstimator.get_params of LocallyLinearEmbedding(method='ltsa', n_components=5)>
+LLE - memory
+Current memory usage is 0.046 MB;'    ' peak was 67.493763 MB
+LLE - timed
+execute in 82.24436934099958 seconds
+LTSA complete
+No classifier run.
+Script complete!
